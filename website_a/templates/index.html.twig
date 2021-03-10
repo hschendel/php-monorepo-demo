@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <section class="uk-section">
+        <div class="uk-container">
+            <h1>Our offers</h1>
+            <table class="uk-table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for offer in offers %}
+                    <tr>
+                        <td>{{ offer.name }}</td>
+                        <td>{{ offer.price | format_currency('EUR', locale='de') }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endblock %}
