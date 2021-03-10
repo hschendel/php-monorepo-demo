@@ -11,7 +11,7 @@ The example is simple, the monorepo contains three projects that could even have
 
 ## How it works
 
-b_client is a path-based composer package.
+b_client is a [path-based composer package](https://getcomposer.org/doc/05-repositories.md#path).
 So in the `composer.json` of service_b and website_a, we add
 
 ```
@@ -34,6 +34,8 @@ Using this mechanism, composer imports the package from the filesystem.
 
 *Important:* Please note that you still have to run `composer update` in the application after every change to
 the imported library, so its newest version is pulled into the `vendor` folder.
+
+As long as we always stick to the 
 
 ## Run it
 
